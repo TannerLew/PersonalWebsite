@@ -94,6 +94,7 @@ a {
 .text_container h1 {
   font-size: var(--font-size-heading);
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 .text_container h1 span {
@@ -114,10 +115,6 @@ a {
   border: none;
 }
 
-.mobile_menu:focus {
-  outline: 2px solid var(--hover-color);
-}
-
 .nav-links {
   display: flex;
 }
@@ -128,10 +125,6 @@ a {
 
 .nav-links a {
   color: white;
-}
-
-.nav-links a:focus {
-  outline: 2px solid var(--hover-color);
 }
 
 .close-btn-container {
@@ -146,10 +139,6 @@ a {
   cursor: pointer;
   margin-right: -2rem;
   margin-top: -2rem;
-}
-
-.close-btn:focus {
-  outline: 2px solid var(--hover-color);
 }
 
 .overlay {
