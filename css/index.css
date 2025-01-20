@@ -83,6 +83,7 @@ a {
   border-radius: 10%;
   object-fit: cover;
   flex-shrink: 0;
+  margin-left: -20%;
 }
 
 .text_container {
@@ -93,6 +94,10 @@ a {
 .text_container h1 {
   font-size: var(--font-size-heading);
   margin-bottom: 1rem;
+}
+
+.text_container h1 span {
+  color: var(--hover-color);
 }
 
 .text_container p {
@@ -139,6 +144,8 @@ a {
   background: none;
   border: none;
   cursor: pointer;
+  margin-right: -2rem;
+  margin-top: -2rem;
 }
 
 .close-btn:focus {
@@ -154,21 +161,6 @@ a {
   background: rgba(0, 0, 0, 0.5);
   display: none;
   z-index: 999;
-}
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  z-index: 100;
-  transition: top 0.3s;
-}
-
-.skip-link:focus {
-  top: 0;
 }
 
 @media screen and (max-width: 960px) {
@@ -220,6 +212,7 @@ a {
     width: var(--headshot-medium);
     height: var(--headshot-medium);
     margin-bottom: 2rem;
+    margin-left: 0;
   }
 
   .text_container {
@@ -240,6 +233,7 @@ a {
     width: var(--headshot-small);
     height: var(--headshot-small);
     margin-bottom: 1.5rem;
+    margin-left: 0;
   }
 
   .text_container h1 {

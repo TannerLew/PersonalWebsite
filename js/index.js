@@ -1,11 +1,20 @@
-// js/index.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const mobile_menu = document.getElementById("mobile_menu");
   const closeBtn = document.getElementById("close-btn");
   const navLinks = document.getElementById("nav-links");
   const overlay = document.getElementById("overlay");
-  const skipLink = document.querySelector(".skip-link");
+
+  var typed = new Typed(".auto-type", {
+    strings: [
+      "Programmer",
+      "Full-Stack Developer",
+      "Software Engineer",
+      "Game Developer",
+    ],
+    typeSpeed: 100,
+    backSpeed: 150,
+    loop: true,
+  });
 
   // Function to open the menu
   const openMenu = () => {
@@ -68,24 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
           firstElement.focus();
         }
       }
-    }
-  });
-
-  // Event listener for Skip to Content link
-  skipLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    const mainContent = document.getElementById("main-content");
-    if (mainContent) {
-      mainContent.setAttribute("tabindex", "-1"); // Make it focusable
-      mainContent.focus();
-      // Remove tabindex after focusing to maintain natural tab order
-      mainContent.addEventListener(
-        "blur",
-        () => {
-          mainContent.removeAttribute("tabindex");
-        },
-        { once: true }
-      );
     }
   });
 });
