@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   var typed = new Typed(".auto-type", {
     strings: [
       "Programmer",
-      "Full-Stack Developer",
+      "Front-End Developer",
       "Software Engineer",
       "Game Developer",
     ],
