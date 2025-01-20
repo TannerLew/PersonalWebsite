@@ -3,49 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Tanner Lewis</title>
     <script
       src="https://kit.fontawesome.com/f28f59d791.js"
       crossorigin="anonymous"
+      defer
     ></script>
   </head>
   <body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <div class="header_container">
       <nav class="navbar">
-        <ul>
-          <li><a href="" class="">Home</a></li>
-          <li><a href="" class="">Projects</a></li>
-          <li><a href="" class="">About Me</a></li>
-          <li><a href="" class="">Contact</a></li>
+        <button
+          class="mobile_menu"
+          id="mobile_menu"
+          aria-label="Open navigation menu"
+          aria-controls="nav-links"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="nav-links" aria-hidden="true">
+          <li class="close-btn-container">
+            <button
+              class="close-btn"
+              id="close-btn"
+              aria-label="Close navigation menu"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </li>
+          <li><a href="" class="navbar_link">Home</a></li>
+          <li><a href="" class="navbar_link">Projects</a></li>
+          <li><a href="" class="navbar_link">About Me</a></li>
+          <li><a href="" class="navbar_link">Contact</a></li>
         </ul>
       </nav>
+
       <div class="personal_links_container">
         <a
           href="https://www.linkedin.com/in/tannerblewis/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn"
           ><i class="fa-brands fa-linkedin"></i
         ></a>
         <a
           href="https://github.com/TannerLew"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub"
         >
           <i class="fa-brands fa-github"></i>
         </a>
 
-        <i class="fa-brands fa-square-instagram"></i>
+        <a
+          href="https://www.instagram.com/yourprofile/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
       </div>
     </div>
 
-    <div class="body_container">
-      <img src="images/headshot.jpg" alt="" class="headshot" />
+    <div class="body_container" id="main-content">
+      <img
+        src="images/headshot.jpg"
+        alt="Headshot of Tanner Lew"
+        class="headshot"
+      />
 
       <div class="text_container">
         <h1>About Me</h1>
-        Coding is something i do and am able to do when im doing things
+        <p>Coding is something I do and am able to do when I'm doing things.</p>
       </div>
     </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
