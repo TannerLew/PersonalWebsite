@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Software Engineer",
       "Game Developer",
       "Web Developer",
+      "College Graduate",
     ],
     typeSpeed: 100,
     backSpeed: 150,
