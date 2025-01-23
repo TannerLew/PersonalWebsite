@@ -15,8 +15,8 @@ function generateHoneycomb() {
   allHexes = [];
 
   // Make the honeycomb larger than the viewport
-  const containerWidth = window.innerWidth * 2; // 300% width
-  const containerHeight = window.innerHeight * 2; // 300% height
+  const containerWidth = window.innerWidth * 3; // 300% width
+  const containerHeight = window.innerHeight * 3; // 300% height
 
   const cols = Math.ceil(containerWidth / (hexWidth * 0.75));
   const rows = Math.ceil(containerHeight / hexHeight);
