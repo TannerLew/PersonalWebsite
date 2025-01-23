@@ -291,4 +291,8 @@ a {
   .text_container p {
     font-size: 1.2rem;
   }
+
+  .honeycomb {
+    height: 200vh;
+  }
 }
