@@ -1,22 +1,16 @@
 const honeycomb = document.getElementById("honeycomb");
-const side = 41; // Side length of the hexagon
+const side = 41;
 const hexWidth = 2 * side;
 const hexHeight = Math.sqrt(3) * side;
 
 let allHexes = [];
 
-/**
- * Generate a large honeycomb pattern that covers 300vw x 300vh.
- * This ensures no gaps around edges and maintains continuity.
- */
 function generateHoneycomb() {
-  // Clear existing hexes
   honeycomb.innerHTML = "";
   allHexes = [];
 
-  // Make the honeycomb larger than the viewport
-  const containerWidth = window.innerWidth * 2; // 300% width
-  const containerHeight = window.innerHeight * 2; // 300% height
+  const containerWidth = window.innerWidth * 2;
+  const containerHeight = window.innerHeight * 2;
 
   const cols = Math.ceil(containerWidth / (hexWidth * 0.75));
   const rows = Math.ceil(containerHeight / hexHeight);
@@ -26,26 +20,17 @@ function generateHoneycomb() {
       const hex = document.createElement("div");
       hex.classList.add("hex");
 
-      /*
-       x = col * (0.75 * hexWidth)
-       y = row * hexHeight + offset if col is odd
-      */
       const xOffset = col * (hexWidth * 0.75);
       const yOffset = row * hexHeight + (col % 2 === 1 ? hexHeight / 2 : 0);
 
-      // Use transform for positioning
       hex.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
 
-      // Add to DOM and track
       honeycomb.appendChild(hex);
       allHexes.push(hex);
     }
   }
 }
 
-/**
- * Light up multiple hexes randomly with a “breathe” effect.
- */
 function lightUpMultipleHexes(n = 20) {
   if (allHexes.length === 0) return;
 
