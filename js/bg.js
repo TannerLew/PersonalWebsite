@@ -65,4 +65,4 @@ setInterval(() => {
   lightUpMultipleHexes(140);
 }, 2000);
 
-//window.addEventListener("resize", generateHoneycomb);
+window.addEventListener("resize", generateHoneycomb);
