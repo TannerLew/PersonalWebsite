@@ -12,7 +12,7 @@ function generateHoneycomb() {
   const containerWidth = window.innerWidth * 2;
   const containerHeight = window.innerHeight * 2;
 
-  const cols = Math.ceil(containerWidth / (hexWidth * 0.75));
+  const cols = Math.ceil(containerWidth / hexWidth);
   const rows = Math.ceil(containerHeight / hexHeight);
 
   for (let col = 0; col < cols; col++) {
@@ -21,11 +21,11 @@ function generateHoneycomb() {
       hex.classList.add("hex");
 
       const xOffset = col * (hexWidth * 0.75);
-      const yOffset = row * hexHeight + (col % 2 === 1 ? hexHeight / 2 : 0);
+      const yOffset = (row + (col % 2) * 0.5) * hexHeight;
 
       hex.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
 
-      honeycomb.appendChild(hex);
+      honeycomb.append(hex);
       allHexes.push(hex);
     }
   }
